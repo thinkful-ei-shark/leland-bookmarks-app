@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Thinkful Bookmark Project">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bookmark App</title>
+</head>
+
+<body>
+    <header role="banner" class="title">
+        <h1><u>Leland's Bookmark App</u></h1>
+    </header>
+    <main role="main">
+        <p class="error-message"></p>
+        <section class="filter" aria-live="polite">
+            <select name="Filter by Minimum Rating" id="minimum-rating-select">
+                <option value="0">Min. Star Rating (Filter by):</option>
+                <option value="1">1 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+        </section>
+        <section class="add-form" aria-live="polite">
+
+        </section>
+        <ul class="my-bookmarks" aria-live="polite"> </ul>
+    </main>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/store.js"></script>
+    <script type="text/javascript" src="scripts/bookmarks.js"></script>
+    <script type='text/javascript' src='scripts/api.js'></script>
+
+</body>
+
+</html>

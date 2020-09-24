@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: whitesmoke;
+    
+}
+
+body {
+    background-image: linear-gradient(to bottom right, blue,black, yellow, black, blue, yellow, blue, black, yellow, black, blue);
+    border: 10px solid black;
+    border-radius: 10px;
+    height: 45em;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.filter {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-form {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#minimum-rating-select {
+    border: none;
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: 60%;
+}
+
+.add-button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid #fcfbfd;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: 60%;
+}
+
+.add-button:hover {
+    background-color: green;
+    color: black;
+}
+
+.my-bookmarks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bookmark-item {
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    list-style: none;
+    width: 90%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookmark-name, .rating {
+    margin: 8px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.bookmark-name {
+    font-size: 40px;
+}
+
+.rating {
+    font-size: 25px;
+}
+
+.bookmark-controls {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.expand-button, .delete-button {
+    background-color:#24057a;
+    border: none;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    width: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.expand-button:hover {
+    background-color: green;
+    color: black;
+}
+
+.delete-button {
+    background-color:#24057a;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+.delete-button:hover {
+    background-color: red;
+    color: black;
+}
+
+.description {
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+    align-items: center;
+}
+
+.visit-site {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: black;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a:hover {
+    color:green;
+}
+
+.condense-button {
+    background-color: #24057a;
+    border: none;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.condense-button:hover {
+    background-color:green;
+    color: rgb(0, 0, 0);
+}
+
+#add-bookmark {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid blue;
+    padding: 8px;
+    padding-top: 1px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: rgb(0, 0, 0);
+}
+
+#add-bookmark > h2 {
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+.labels-inputs {
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.form-input {
+    color: white;
+    width: 90%;
+    margin-top: 3px;
+    height: 30px;
+    border: 2px solid rgb(194, 194, 207);
+    padding-left: 3px;
+    font-size: 15px;
+}
+
+#minimum-rating-select {
+    color: black;
+}
+
+option {
+    color: rgb(168, 168, 2);
+}
+
+#bookmark-title, #bookmark-url, #bookmark-description, #bookmark-rating {
+    color: black;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.bookmark-title, .bookmark-url, .bookmark-description, .bookmark-rating {
+    color: white;
+}
+
+.form-buttons {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.form-button {
+    background-color: #24057a;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border: 1.5px solid #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cancel-bookmark-button {
+    background-color: #24057a;
+    border: 1.5px rgb(253, 253, 253) solid;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+.form-button:hover {
+    background-color: green;
+    color: rgb(0, 0, 0);
+  }
+
+.cancel-bookmark-button:hover {
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 750px) {
+    h1 {
+        margin-top: 25px;
+        font-size: 45px;
+    }
+
+    #bookmark-title, #bookmark-url {
+        width: 80%;
+    }
+
+    #bookmark-description {
+        width: 80%;
+        height: 100px;
+    }
+
+    #bookmark-rating {
+        margin-bottom: 20px;
+    }
+
+    .add-button, #minimum-rating-select {
+        width: 500px;
+    }
+
+    #add-bookmark {
+        width: 700px;
+    }
+
+    .bookmark-item {
+        width: 700px;
+    }
+
+    .expand-button, .delete-button, .condense-button {
+        width: 100px;
+    }
+
+    .form-buttons {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    h1 {
+        font-size: 55px;
+        margin-top: 30px;
+    }
+
+    #bookmark-title, #bookmark-url {
+        width: 60%;
+    }
+
+    #bookmark-description {
+        width: 60%;
+        height: 140px;
+    }
+
+    #bookmark-rating {
+        margin-bottom: 30px;
+    }
+
+    .add-button, #minimum-rating-select {
+        width: 600px;
+    }
+
+    #add-bookmark {
+        width: 900px;
+    }
+
+    .bookmark-item {
+        width: 900px;
+    }
+
+    .expand-button, .delete-button, .condense-button {
+        width: 120px;
+    }
+
+    .form-buttons {
+        margin-bottom: 35px;
+    }
+}
