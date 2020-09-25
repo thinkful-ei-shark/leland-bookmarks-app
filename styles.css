@@ -9,8 +9,6 @@
 
 body {
     background-image: linear-gradient(to bottom right, blue,black, yellow, black, blue, black, yellow, black, blue, black, yellow, black, blue);
-    /*border: 10px solid black;
-    border-radius: 10px;*/
     height: 45em;
     
 }
