@@ -9,9 +9,11 @@ const bookmarks = (function () {
             render();
         });
     }
+    
 
 
     function generateAddBookmarkForm() {
+        
         return `
       <form id="add-bookmark">
         <h2>Enter A New Bookmark</h2>
