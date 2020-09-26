@@ -1,7 +1,22 @@
 'use strict';
 
 const bookmarks = (function () {
+   $('main').append(`<p class="error-message"></p>
+   <section class="filter" aria-live="polite">
+       <select name="Filter by Minimum Rating" id="minimum-rating-select">
+           <option value="0">Min. Star Rating (Filter by):</option>
+           <option value="1">1 Stars</option>
+           <option value="2">2 Stars</option>
+           <option value="3">3 Stars</option>
+           <option value="4">4 Stars</option>
+           <option value="5">5 Stars</option>
+       </select>
+   </section>
+   <section class="add-form" aria-live="polite">
 
+   </section>
+   <ul class="my-bookmarks" aria-live="polite"> </ul>`)
+    
     function handleAddBookmark() {
         $('.add-form').on('click', '.add-button', function (event) {
             store.isAddingBookmark = true;
@@ -9,7 +24,6 @@ const bookmarks = (function () {
             render();
         });
     }
-    
 
 
     function generateAddBookmarkForm() {
@@ -43,6 +57,13 @@ const bookmarks = (function () {
         </div>
         
       </form>`;
+    }
+
+    function addTheBookmark() {
+        return `
+        <div class="add">
+          <button type="button" class="add-button">Add Bookmark</button>
+        </div>`
     }
 
 
@@ -114,10 +135,7 @@ const bookmarks = (function () {
         if (store.isAddingBookmark) {
             $('.add-form').html(generateAddBookmarkForm());
         } else {
-            $('.add-form').html(`
-        <div class="add">
-          <button type="button" class="add-button">Add Bookmark</button>
-        </div>`);
+            $('.add-form').html(addTheBookmark());
         }
 
         if (store.error.message) {
@@ -130,6 +148,7 @@ const bookmarks = (function () {
         let ratingFilteredBookmarks = bookmarks.filter(bookmark => bookmark.rating >= store.minRating);
         let htmlString = generateBookmarkString(ratingFilteredBookmarks);
         $('.my-bookmarks').html(htmlString);
+        
     }
 
 
